@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <link rel="icon" href="img/—Pngtree—stopwatch timer_5468904.png" type="image/x-icon">
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="design.css">
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+   
+
+    <link href="http://fonts.cdnfonts.com/css/calculator" rel="stylesheet">
+    
+</head>
+
+<body>
+    <div class="bg">
+        <video class="bg" autoplay muted loop id="myVideo">
+          <source src="./img/nature_-_31377 (1440p).mp4" type="">
+        </video>
+    </div>
+    
+    <!-- title -->
+    <div class="container" id="main">
+        <div id="header">
+            <h1>Stopwatch</h1>
+        </div>
+        <div id="watch" >
+            <!-- lap timer -->
+            <div id="lap">
+                
+                <span id="lapmin">00</span>:
+                <span id="lapsec">00</span>:
+                <span id="lapmsec">00</span>
+
+            </div>
+            <!-- timer -->
+            <div id="timer">
+
+                <span id="min">00</span>:
+                <span id="sec">00</span>:
+                <span id="msec">00</span>
+                
+            </div>
+            <!-- controls -->
+            <div id="controls">
+                <div class="row">
+                    <div class="mycol" class=" col-lg-6 col-md-6 col-sm-6 col-6 ">
+                        <div class="controlbtn" id="startbtn"> <span>Start</span></div>
+                        
+                        <!-- <button class="button">
+                            <span>Start</span>
+                        </button> -->
+
+                        <div class="controlbtn" id="stopbtn"> <span>Stop</span></div>
+
+                        <div class="controlbtn" id="resumebtn"> <span>Resume</span></div>
+                    </div>
+                    <div class="mycol" class=" col-lg-6 col-md-6 col-sm-6 col-6">
+                        <div class="controlbtn " id="lapbtn"> <span>Lap</span></div>
+
+                        <div class="controlbtn" id="resetbtn"> <span>Reset</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div  id="lapbox">
+            <!-- laps -->
+            <div id="laps">
+    
+            </div>
+        </div>
+    </div>
+    <script defer src="stopwatch.js"></script>
+    <script defer type="text/javascript" src="vanilla-tilt.js"></script>
+    <script defer src="tiltJs.js"></script>
+    <script defer src="Button.js"></script>
+</body>
+
+</html>

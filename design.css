@@ -1,0 +1,214 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* border: 1px solid #eee; */
+}
+
+body {
+
+    height: 100vh;
+    position: relative;
+    /* background-image: url('https://images.pexels.com/photos/48770/business-time-clock-clocks-48770.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); */
+    /* background: #313030; */
+    width: 100%;
+    cursor: cell;
+    /* overflow: hidden; */
+
+}
+
+.bg {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    filter: contrast(.9) brightness(.5);
+}
+
+/* Container  */
+#main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#watch {
+
+    padding: 2em 5em;
+    position: relative;
+    margin: 1em 0;
+    color: #000;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, .3), transparent);
+    backdrop-filter: blur(3px);
+    border-radius: 30px;
+    transform: perspective(1000px);
+    transform-style: preserve-3d;
+}
+
+/* header */
+#header {
+    color: #fff;
+    text-align: center;
+    margin: .5em 0;
+}
+
+#header h1 {
+    font-weight: 200;
+    font-size: 60px;
+}
+
+/* lap timer */
+#lap {
+    text-align: center;
+    font-size: 2em;
+    /* border: 1px solid black; */
+    transform: translateZ(30px);
+}
+
+/* timer */
+#timer {
+    text-align: center;
+    font-size: 4em;
+    font-family: 'Calculator', sans-serif;
+    /* border: 1px solid black; */
+    transform: translateZ(30px);
+
+}
+
+/* control div */
+#controls {
+
+
+    width: 100%;
+    text-align: center;
+    transform: translateZ(30px);
+}
+
+.mycol {
+
+    /* border: 1px solid orange; */
+    width: 50%;
+}
+
+/* control buttons */
+.controlbtn {
+    margin: 15px auto 10px;
+    position: relative;
+    background: rgba(79, 41, 240, .4);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    border-radius: 15px 20px 5px 25px;
+    padding: 15px 25px;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 200;
+    padding: 10px 30px;
+    cursor: pointer;
+    border: 1px solid #474748;
+    outline: none;
+    height: 60px;
+    box-shadow: 0 1px 60px rgba(100, 22, 151, 0.2);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.1s ease, color 0.1s linear, background 0.15s ease;
+}
+
+.controlbtn>span {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.15s linear;
+}
+
+
+.controlbtn:active {
+    background: rgba(0, 0, 0, 0.8);
+    
+}
+
+#lapbox {
+    text-align: center;
+    width: 90%;
+    min-height: 200px;
+}
+
+#laps::-webkit-scrollbar {
+    width: 7px;
+}
+
+#laps::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 30px;
+}
+
+#laps {
+    max-height: 270px;
+    overflow-y: scroll;
+}
+
+.lap {
+    height: 50px;
+    border-bottom: 3px solid rgba(79, 41, 240, .4);
+    padding: 20px 30px 60px 30px;
+    margin: 15px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    backdrop-filter: blur(10px);
+    /* border: 1px solid red; */
+    box-shadow: 0 0 10px black;
+    border-radius: 20px;
+}
+
+.lap:hover {
+    background: linear-gradient(125deg, transparent, rgba(79, 41, 240, .4), transparent);
+}
+
+.lapTitle {
+    font-size: 1.5em;
+    float: left;
+    font-weight: 300;
+    /* border: 1px solid green; */
+}
+
+.lapTime {
+    float: right;
+    font-weight: 300;
+    font-size: 1.5em;
+    /* border: 1px solid blue; */
+}
+
+@media screen and (max-width:480px) {
+    #lap {
+
+        font-size: 6vw;
+        margin: 10px 0;
+    }
+
+    #timer {
+        font-size: 9vw;
+    }
+    .controlbtn{
+        font-size: 4vw;
+        height: 40px;
+    }
+    .lap{
+        padding: 10px 20px 30px 20px;
+    }
+    .lapTitle {
+        
+        font-size: 4vw;
+        
+    }
+    
+    .lapTime {
+        font-size: 4vw;
+       
+    }
+}
